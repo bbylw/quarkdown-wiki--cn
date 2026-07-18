@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta name="generator" content="Quarkdown">
+    <meta charset="UTF-8">
+    <link href="/quickstart" rel="canonical">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="quarkdown:root-path" content="..">
+    <meta name="quarkdown:search-index" content="../search-index.json">
+    <title>快速开始 | Quarkdown Wiki</title>
+    <script src="../script/quarkdown.min.js"></script>
+    <script>const capabilities = window.quarkdownCapabilities</script>
+    <script>window.texMacros = {}</script>
+    <link href="../lib/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+    <script src="../lib/highlight.js/highlightjs.min.js"></script>
+    <script src="../lib/highlightjs-line-numbers/highlightjs-line-numbers.min.js"></script>
+    <script src="../lib/highlightjs-copy/highlightjs-copy.min.js"></script>
+    <link href="../lib/highlightjs-copy/highlightjs-copy.min.css" rel="stylesheet">
+    <script>capabilities.code = true;</script>
+    <link href="../theme/theme.css" rel="stylesheet">
+    <style>
+
+</style>
+    <script>prepare(new DocsDocument());</script>
+<template id="sidebar-template"><nav class="sidebar" role="doc-toc"><ol><li data-target-id="创建文档" data-depth="2"><a href="#创建文档">创建文档</a><ol><li data-target-id="选择文档类型" data-depth="3"><a href="#选择文档类型">选择文档类型</a></li><li data-target-id="选择主题" data-depth="3"><a href="#选择主题">选择主题</a></li></ol></li><li data-target-id="编译" data-depth="2"><a href="#编译">编译</a></li><li data-target-id="实时预览" data-depth="2"><a href="#实时预览">实时预览</a></li><li data-target-id="标记语法" data-depth="2"><a href="#标记语法">标记语法</a><ol><li data-target-id="图片尺寸" data-depth="3"><a href="#图片尺寸">图片尺寸</a></li><li data-target-id="插图" data-depth="3"><a href="#插图">插图</a></li><li data-target-id="方程与公式" data-depth="3"><a href="#方程与公式">方程与公式</a></li></ol></li><li data-target-id="函数调用语法" data-depth="2"><a href="#函数调用语法">函数调用语法</a><ol><li data-target-id="变量" data-depth="3"><a href="#变量">变量</a></li></ol></li><li data-target-id="自定义元素" data-depth="2"><a href="#自定义元素">自定义元素</a></li><li data-target-id="样式化元素" data-depth="2"><a href="#样式化元素">样式化元素</a></li><li data-target-id="编号" data-depth="2"><a href="#编号">编号</a></li><li data-target-id="目录" data-depth="2"><a href="#目录">目录</a></li><li data-target-id="脚注" data-depth="2"><a href="#脚注">脚注</a></li><li data-target-id="交叉引用" data-depth="2"><a href="#交叉引用">交叉引用</a></li><li data-target-id="页边距与计数器" data-depth="2"><a href="#页边距与计数器">页边距与计数器</a><ol><li data-target-id="持久标题" data-depth="3"><a href="#持久标题">持久标题</a></li></ol></li><li data-target-id="多文件项目-2" data-depth="2"><a href="#多文件项目-2">多文件项目</a><ol><li data-target-id="引入文件" data-depth="3"><a href="#引入文件">引入文件</a></li><li data-target-id="引用文件" data-depth="3"><a href="#引用文件">引用文件</a></li></ol></li><li data-target-id="静态资源" data-depth="2"><a href="#静态资源">静态资源</a></li><li data-target-id="结语" data-depth="2"><a href="#结语">结语</a></li></ol></nav>
+</template>  </head>
+  <body class="quarkdown quarkdown-docs">
+    <header>
+      <aside class="margin-area"></aside>
+      <main>
+        <div class="search-wrapper">
+          <div class="search-field"><i class="bi bi-search"></i><input type="text" id="search-input" placeholder="Search" autocomplete="off"><kbd>/</kbd></div>
+        </div>
+      </main>
+      <aside class="margin-area"></aside>
+    </header>
+    <div class="content-wrapper">
+      <aside class="margin-area" id="margin-area-left">
+        <div class="position-top"></div>
+        <div class="position-middle"></div>
+        <div class="position-bottom"></div>
+      </aside>
+      <main><style data-hidden="">.page-margin-top-left a {
+    display: flex !important;
+}
+
+header .version {
+    opacity: 0.6 !important;
+    transform: translateY(2px) !important;
+}
+
+.quarkdown-output {
+    padding: 12px 16px !important;
+    border-radius: 8px !important;
+    background-color: var(--box-header-background-color) !important;
+}
+
+.quarkdown-output:empty::after {
+    content: "(No output)" !important;
+    color: var(--qd-main-color-muted) !important;
+}
+
+.quarkdown-output :is(h1, h2, h3, h4, h5, h6) {
+    padding: 0 !important;
+    border: none !important;
+}
+
+.quarkdown-output :is(h1, h2, h3, h4, h5, h6):first-child {
+    margin-top: 0 !important;
+}
+
+.quarkdown-output .file-tree:only-child {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.quarkdown-output img[src*="sky"] {
+    max-width: 50% !important;
+}
+
+.box:has(.quarkdown-output) pre {
+    margin-bottom: 16px !important;
+}</style><div class="page-margin-content page-margin-top-left" data-on-left-page="top-left" data-on-right-page="top-left"><div style="justify-content: flex-start; align-items: center; column-gap: 12.0px;" class="stack stack-row"><p><a href="https://quarkdown.com"><img src="media/banner-light@306139514.svg" alt="Quarkdown" /></a></p><a href="https://github.com/iamgio/quarkdown/releases/latest"><span class="version">v2.4.0
+</span></a></div></div><div class="page-margin-content page-margin-top-right" data-on-left-page="top-right" data-on-right-page="top-right"><div style="justify-content: flex-start; align-items: center;" class="stack stack-row"><p><a href="https://quarkdown.com/docs">文档</a></p><hr /><p><a href="https://github.com/iamgio/quarkdown"><i class="icon-image bi bi-github" aria-hidden="true"></i></a></p></div></div><div class="page-margin-content page-margin-left-top" data-on-left-page="left-top" data-on-right-page="left-top"><nav role="navigation" data-role="page-list"><h3 id="入门" data-decorative="">入门</h3><ul><li><a href="../quickstart" aria-current="page">快速开始</a></li><li><a href="../agent-skill">AI 智能体技能</a></li><li><a href="../cli-options">命令行选项</a></li></ul><h3 id="文档" data-decorative="">文档</h3><ul><li><a href="https://quarkdown.com/docs/quarkdown-stdlib/">稳定版 ↗</a></li><li><a href="https://quarkdown.com/docs/latest/quarkdown-stdlib/">最新构建 ↗</a></li></ul><h3 id="函数" data-decorative="">函数</h3><ul><li><a href="../syntax-of-a-function-call">函数调用语法</a><ul><li><a href="../syntax-of-a-function-call#chaining-calls">链式调用</a></li><li><a href="../syntax-of-a-function-call#block-vs-inline-function-calls">块级与行内调用</a></li></ul></li><li><a href="../declaring-functions">声明函数</a></li><li><a href="../extending-functions">扩展函数</a></li><li><a href="../typing">动态类型</a></li><li><a href="../localization">本地化</a></li></ul><h3 id="文档设置" data-decorative="">文档设置</h3><ul><li><a href="../document-metadata">文档元数据</a><ul><li><a href="../document-types">文档类型</a></li></ul></li><li><a href="../themes">主题</a></li><li><a href="../element-styling">元素样式</a><ul><li><a href="../element-styling-properties">样式属性</a></li></ul></li><li><a href="../font-configuration">字体</a></li><li><a href="../page-format">页面格式</a><ul><li><a href="../multi-column-layout">多栏布局</a></li></ul></li><li><a href="../page-margin-content">页边距内容</a></li><li><a href="../page-counter">页码</a></li><li><a href="../persistent-headings">持久标题</a></li><li><a href="../numbering">编号</a></li><li><a href="../paragraph-style">段落样式</a></li><li><a href="../caption-position">标题位置</a></li><li><a href="../table-of-contents">目录</a></li><li><a href="../bibliography">参考文献</a></li><li><a href="../footnotes">脚注</a></li><li><a href="../book-cover">书籍封面</a></li></ul><h3 id="markdown-增强" data-decorative="">Markdown 增强</h3><ul><li><a href="../figure">插图</a></li><li><a href="../image-size">图片尺寸</a></li><li><a href="../tex-formulae">TeX 公式</a></li><li><a href="../table-caption">表格标题</a></li><li><a href="../code-caption">代码标题</a></li><li><a href="../decorative-headings">装饰性标题</a></li><li><a href="../quote-types">提示框（引用类型）</a></li><li><a href="../quotation-source">引用来源</a></li><li><a href="../cross-references">交叉引用</a></li><li><a href="../page-break">分页符</a><ul><li><a href="../page-break#automatic-break">自动分页</a></li></ul></li><li><a href="../text-symbols">文本符号</a></li><li><a href="../keybindings">快捷键</a></li><li><a href="../icons">图标</a></li><li><a href="../emojis">表情符号</a></li><li><a href="../primitives">基础函数</a><ul><li><a href="../headings">标题</a></li></ul></li></ul><h3 id="布局" data-decorative="">布局</h3><ul><li><a href="../stacks">堆栈：行、列、网格</a></li><li><a href="../container">容器</a></li><li><a href="../align">对齐</a></li><li><a href="../float">浮动</a></li><li><a href="../custom-figure">插图</a></li><li><a href="../clip">裁剪</a></li><li><a href="../box">盒子</a></li><li><a href="../file-tree">文件树</a></li><li><a href="../collapsible">可折叠</a></li><li><a href="../landscape-content">横向内容</a></li><li><a href="../whitespace">空白</a></li></ul><h3 id="多文件项目" data-decorative="">多文件项目</h3><ul><li><a href="../including-other-quarkdown-files">引入其他 Quarkdown 文件</a></li><li><a href="../subdocuments">引用其他 Quarkdown 文件</a><ul><li><a href="../inclusion-vs-subdocuments">引入 vs. 引用</a></li></ul></li><li><a href="../importing-external-libraries">导入外部库</a></li></ul><h3 id="变量与脚本" data-decorative="">变量与脚本</h3><ul><li><a href="../variables">变量</a></li><li><a href="../none">可选项</a></li><li><a href="../math">数学运算</a></li><li><a href="../conditional-statements">条件语句</a></li><li><a href="../loops">循环</a></li><li><a href="../let">Let</a></li><li><a href="../destructuring">解构</a></li></ul><h3 id="数据与表格" data-decorative="">数据与表格</h3><ul><li><a href="../table-manipulation">表格操作</a></li><li><a href="../table-generation">表格生成</a></li><li><a href="../file-data#file-text-content">从文件读取文本内容</a></li><li><a href="../file-data#table-from-csv">从 CSV 数据生成表格</a></li><li><a href="../listing-files">列出文件</a></li></ul><h3 id="图表与图示" data-decorative="">图表与图示</h3><ul><li><a href="../xy-chart">XY 图表</a></li><li><a href="../mermaid-diagrams">Mermaid 图表</a></li></ul><h3 id="文本与代码" data-decorative="">文本与代码</h3><ul><li><a href="../regex-match">基于正则的样式</a></li><li><a href="../text">高级文本格式化</a></li><li><a href="../code">高级代码块</a></li><li><a href="../line-breaks">显式换行</a></li><li><a href="../tex-macros">TeX 宏</a></li></ul><h3 id="幻灯片" data-decorative="">幻灯片</h3><ul><li><a href="../slides-configuration">幻灯片配置</a></li><li><a href="../slides-fragment">交互式片段</a></li><li><a href="../slides-speaker-notes">演讲者备注</a></li></ul><h3 id="html" data-decorative="">HTML</h3><ul><li><a href="../html">HTML</a></li><li><a href="../css">CSS</a></li><li><a href="../html-options">HTML 选项</a></li><li><a href="../html-static-assets">静态资源</a></li></ul><h3 id="值类型" data-decorative="">值类型</h3><ul><li>String</li><li>Number</li><li><a href="../markdown-content">Markdown 内容</a></li><li><a href="../boolean">布尔值</a></li><li><a href="../none">None</a></li><li><a href="../enumeration-entry">枚举项</a></li><li><a href="../iterable">可迭代对象</a></li><li><a href="../dictionary">字典</a></li><li><a href="../range">范围</a></li><li><a href="../lambda">Lambda</a></li><li><a href="../sizes">尺寸</a></li><li><a href="../color">颜色</a></li><li><a href="../typing">动态类型</a></li></ul><h3 id="内置库" data-decorative="">内置库</h3><ul><li><a href="../docs-library">Docs：文档项目</a></li><li><a href="../paper-library">Paper：摘要、定义、定理</a></li></ul><h3 id="流程" data-decorative="">流程</h3><ul><li><a href="../environment">环境变量</a></li></ul><h3 id="资源与日志" data-decorative="">资源与日志</h3><ul><li><a href="../media-storage">媒体存储</a></li><li><a href="../logging">日志</a></li></ul><h3 id="命令行工具" data-decorative="">命令行工具</h3><ul><li><a href="../cli-compiler">编译器</a></li><li><a href="../pdf-export">导出为 PDF</a></li><li><a href="../cli-project-creator">项目创建器</a></li><li><a href="../cli-webserver">Web 服务器</a></li><li><a href="../cli-doctor">诊断工具</a></li></ul><h3 id="quarkdown-内部原理" data-decorative="">Quarkdown 内部原理</h3><ul><li><a href="../pipeline">Quarkdown 的处理管线</a><ul><li><a href="../pipeline---lexing">词法分析</a></li><li><a href="../pipeline---parsing">语法解析</a></li><li><a href="../pipeline---function-call-expansion">函数调用展开</a></li><li><a href="../pipeline---tree-rewrite">树重写</a></li><li><a href="../pipeline---tree-traversal">树遍历</a></li><li><a href="../pipeline---rendering">渲染</a></li><li><a href="../pipeline---post-rendering">后渲染</a></li></ul></li><li><a href="../inside-live-preview">实时预览是如何工作的？</a></li></ul></nav></div><div class="page-margin-content page-margin-right-top" data-on-left-page="right-top" data-on-right-page="right-top"><h3 id="table-of-contents">本页目录</h3><nav role="table-of-contents" data-role="table-of-contents"><ol><li data-target-id="创建文档" data-depth="2"><a href="#创建文档">创建文档</a><ol><li data-target-id="选择文档类型" data-depth="3"><a href="#选择文档类型">选择文档类型</a></li><li data-target-id="选择主题" data-depth="3"><a href="#选择主题">选择主题</a></li></ol></li><li data-target-id="编译" data-depth="2"><a href="#编译">编译</a></li><li data-target-id="实时预览" data-depth="2"><a href="#实时预览">实时预览</a></li><li data-target-id="标记语法" data-depth="2"><a href="#标记语法">标记语法</a><ol><li data-target-id="图片尺寸" data-depth="3"><a href="#图片尺寸">图片尺寸</a></li><li data-target-id="插图" data-depth="3"><a href="#插图">插图</a></li><li data-target-id="方程与公式" data-depth="3"><a href="#方程与公式">方程与公式</a></li></ol></li><li data-target-id="函数调用语法" data-depth="2"><a href="#函数调用语法">函数调用语法</a><ol><li data-target-id="变量" data-depth="3"><a href="#变量">变量</a></li></ol></li><li data-target-id="自定义元素" data-depth="2"><a href="#自定义元素">自定义元素</a></li><li data-target-id="样式化元素" data-depth="2"><a href="#样式化元素">样式化元素</a></li><li data-target-id="编号" data-depth="2"><a href="#编号">编号</a></li><li data-target-id="目录" data-depth="2"><a href="#目录">目录</a></li><li data-target-id="脚注" data-depth="2"><a href="#脚注">脚注</a></li><li data-target-id="交叉引用" data-depth="2"><a href="#交叉引用">交叉引用</a></li><li data-target-id="页边距与计数器" data-depth="2"><a href="#页边距与计数器">页边距与计数器</a><ol><li data-target-id="持久标题" data-depth="3"><a href="#持久标题">持久标题</a></li></ol></li><li data-target-id="多文件项目-2" data-depth="2"><a href="#多文件项目-2">多文件项目</a><ol><li data-target-id="引入文件" data-depth="3"><a href="#引入文件">引入文件</a></li><li data-target-id="引用文件" data-depth="3"><a href="#引用文件">引用文件</a></li></ol></li><li data-target-id="静态资源" data-depth="2"><a href="#静态资源">静态资源</a></li><li data-target-id="结语" data-depth="2"><a href="#结语">结语</a></li></ol></nav></div><h1 id="快速开始" data-decorative="">快速开始</h1><p>欢迎使用 Quarkdown！本指南将带你了解创建第一篇文档所需的主要功能。</p><blockquote><p>提示：如果你使用 VS Code，我们强烈推荐安装<a href="https://marketplace.visualstudio.com/items?itemName=quarkdown.quarkdown-vscode">官方 Quarkdown 扩展</a>。</p></blockquote><p>本指南提供概览，不会深入每一个细节。每个小节都包含指向其他维基页面的链接，你可以在那里了解特定功能的更多信息。</p><h2 id="创建文档">创建文档</h2><blockquote><p>参考：<a href="../cli-project-creator">项目创建器</a></p></blockquote><p>要创建一个新文档，请在终端中运行项目创建器：</p><pre><code class="language-shell">quarkdown create my-document</code></pre><p>该命令会创建一个名为 <span class="codespan-content"><code>my-document</code></span> 的新文件夹。如果你想改用当前工作目录，可以省略名称。</p><p>对于本快速开始，我们推荐以下选项：</p><ul><li>项目名称：<span class="codespan-content"><code>Quickstart</code></span></li><li>作者：<你的名字&gt;</li><li>文档类型：<span class="codespan-content"><code>plain</code></span></li><li>文档语言：<span class="codespan-content"><code>English</code></span></li></ul><p>项目创建完成后，在你喜欢的文本编辑器中打开 <span class="codespan-content"><code>my-document.qd</code></span>。如果你想从头开始，可以删除第一节中已有的内容。</p><pre><code class="language-diff">## Quickstart
+
+- Welcome to [Quarkdown](https://quarkdown.com)!
+- This is the starting point of your document.
+- ...</code></pre><h3 id="选择文档类型">选择文档类型</h3><blockquote><p>参考：<a href="../document-types">文档类型</a></p></blockquote><p>在初始设置期间，你可以从以下选项中选择一种文档类型：</p><ul><li><strong><span class="codespan-content"><code>plain</code></span></strong>：连续的流式布局，类似 Notion 或 Obsidian，非常适合知识管理与网页浏览。</li><li><strong><span class="codespan-content"><code>paged</code></span></strong>：带有分页符的传统文档布局，非常适合 PDF。</li><li><strong><span class="codespan-content"><code>slides</code></span></strong>：带有交互式导航的演示格式。</li><li><strong><span class="codespan-content"><code>docs</code></span></strong>：带有侧边栏与目录的文档格式，非常适合知识库与维基。本维基本身就是一个 <span class="codespan-content"><code>docs</code></span> 文档。</li></ul><h3 id="选择主题">选择主题</h3><blockquote><p>参考：<a href="../themes">主题</a></p></blockquote><p>主题分为两组：<em>配色</em>主题定义文档的配色方案，而<em>布局</em>主题设定布局的总体结构规则。</p><pre><code class="language-markdown">.theme {paperwhite} layout:{latex}</code></pre><p>一些流行的组合包括：</p><ul><li><span class="codespan-content"><code>paperwhite + latex</code></span>：干净的学术外观（这是默认设置）</li><li><span class="codespan-content"><code>darko + minimal</code></span>：带有极简样式的暗色主题</li><li><span class="codespan-content"><code>galactic + hyperlegible</code></span>：本维基所使用的主题，字体高度可读</li><li><span class="codespan-content"><code>beaver + beamer</code></span>：学术演示风格</li></ul><p>有关可用主题的完整列表，请参阅<a href="../themes">主题</a> 。</p><h2 id="编译">编译</h2><blockquote><p>参考：<a href="../cli-compiler">编译器</a></p></blockquote><p>编译文档，以确保一切按预期工作：</p><pre><code class="language-shell">cd my-document
+quarkdown c main.qd</code></pre><p>你应该会在 <span class="codespan-content"><code>output</code></span> 目录中看到 HTML 输出。</p><p>要导出为 PDF，请添加 <span class="codespan-content"><code>--pdf</code></span> 标志：</p><pre><code class="language-shell">quarkdown c main.qd --pdf</code></pre><p>有关 PDF 导出及其要求的更多信息，请参阅<a href="../pdf-export">PDF 导出</a> 页面。如果你是通过包管理器或安装脚本安装的 Quarkdown，应该已经准备就绪。</p><h2 id="实时预览">实时预览</h2><p>要启动实时预览，请在编译命令后追加 <span class="codespan-content"><code>-p</code></span>（预览）与 <span class="codespan-content"><code>-w</code></span>（监视）：</p><pre><code class="language-shell">quarkdown c main.qd -p -w</code></pre><p>这会启动默认浏览器。要使用不同的浏览器，请用 <span class="codespan-content"><code>--browser</code></span> 选项指定，例如 <span class="codespan-content"><code>--browser chrome</code></span>。</p><p>如果你在 VS Code 中使用 Quarkdown 扩展，可以点击放大镜按钮或按下 <span class="codespan-content"><code>Ctrl/Cmd+Shift+V</code></span> 来启动实时预览。</p><h2 id="标记语法">标记语法</h2><p>Quarkdown 构建于 Markdown 之上，并包含若干 GFM 扩展。要尝试基础标记语法，请将以下内容追加到你的文档中并进行试验：</p><pre><code class="language-markdown">### A Quarkdown tour
+
+No need to reinvent the wheel: you can make text **bold** or *italic*,
+~~strike through~~, add `inline code`,
+create [links](https://quarkdown.com), and much more.
+
+- An unordered list
+- With multiple items
+
+1. An ordered list
+2. With multiple items
+
+![Logo](image/logo.png)</code></pre><figure><img src="media/markup@-947113536.png" alt="Markup" style="width: 650.0px;" /></figure><p>有关 Markdown 基础知识的复习，请参阅 <a href="https://www.markdownguide.org/basic-syntax">markdownguide.org</a>。</p><h3 id="图片尺寸">图片尺寸</h3><blockquote><p>参考：<a href="../image-size">图片尺寸</a> 、<a href="../sizes">尺寸</a></p></blockquote><p>你可能已经注意到，上例中的图片显得过大。Quarkdown 克服了这一广为人知的 Markdown 限制，允许你指定图片尺寸：</p><pre><code class="language-markdown">!(50%)[Logo](image/logo.png)</code></pre><p>现在图片的尺寸就合适了。</p><figure><img src="media/image-size@-1179093171.png" alt="Image size" style="width: 650.0px;" /></figure><p>这将图片宽度设置为可用宽度的 50%，同时保持宽高比。支持的单位包括 <span class="codespan-content"><code>px</code></span>、<span class="codespan-content"><code>pt</code></span>、<span class="codespan-content"><code>cm</code></span>、<span class="codespan-content"><code>mm</code></span>、<span class="codespan-content"><code>in</code></span> 和 <span class="codespan-content"><code>%</code></span>。如果省略单位，Quarkdown 会假定为 <span class="codespan-content"><code>px</code></span>。</p><p>要同时指定宽度与高度：</p><pre><code class="language-markdown">!(6cm 2cm)[Logo](image/logo.png)</code></pre><p>要仅指定高度：</p><pre><code class="language-markdown">!(_ 2cm)[Logo](image/logo.png)</code></pre><h3 id="插图">插图</h3><blockquote><p>参考：<a href="../figure">插图</a></p></blockquote><p>当一张图片独立存在，与其他内容相互隔离时，它会自动变成一个插图。插图居中显示，并且可以拥有标题。</p><p>以之前的图片为例：</p><pre><code class="language-markdown">!(50%)[Logo](image/logo.png)</code></pre><p>你可以通过追加用引号包裹的标题来添加标题：</p><pre><code class="language-markdown">!(50%)[Logo](image/logo.png &quot;The Quarkdown logo&quot;)</code></pre><figure><img src="media/figure@1347079836.png" alt="Figure" style="width: 650.0px;" /></figure><h3 id="方程与公式">方程与公式</h3><blockquote><p>参考：<a href="../tex-formulae">TeX 公式</a></p></blockquote><p>你可以使用 <span class="codespan-content"><code>$ expression $</code></span> 语法来包含 TeX 方程。注意空白字符是有影响的。</p><p>将以下内容添加到文档底部：</p><pre><code class="language-markdown">#### Equations
+
+$ E = mc^2 $ is Einstein's mass-energy equivalence formula.
+
+$ f(x, y) = \frac{x}{y} $</code></pre><p>注意，第二个方程虽然使用相同的语法，却显示在自己单独的一行且居中。就像插图一样，孤立的方程会自动变成块级方程。</p><figure><img src="media/equations@1310259493.png" alt="Equations" style="width: 650.0px;" /></figure><h2 id="函数调用语法">函数调用语法</h2><blockquote><p>参考：<a href="../syntax-of-a-function-call">函数调用语法</a></p></blockquote><p>在探索更多功能之前，让我们先看看 Quarkdown 的函数调用语法。</p><p>函数调用以句点开头，并使用花括号表示参数。参数可以是位置参数，也可以是命名参数：</p><pre><code class="language-markdown">.pow {5} to:{2} is a mathematical operation.</code></pre><p>函数调用可以是<em>行内</em>或<em>块级</em>，取决于它们出现在其他内容内部还是独立存在。</p><p>块级函数调用还支持缩进的<em>块级参数</em>，它始终对应于函数的最后一个参数：</p><pre><code class="language-markdown">.align {center}
+    This multi-line paragraph is the block argument,
+    and it's now centered in the document.</code></pre><p>你可以将多个函数调用链接在一起，其中一个的输出成为下一个的第一个参数：</p><div class="box tip"><header><h4>示例 1</h4></header><div class="box-content"><pre><code class="language-markdown nohljsln">.sqrt {10}::round::multiply {2}</code></pre><div class="container fullwidth quarkdown-output"><p>6</p></div></div></div><blockquote><p>提示：你可以在<a href="https://quarkdown.com/docs/quarkdown-stdlib/">文档</a>中找到全部可用函数的完整列表。</p></blockquote><h3 id="变量">变量</h3><blockquote><p>参考：<a href="../variables">变量</a></p></blockquote><p>使用 <span class="codespan-content"><code>.var</code></span> 函数定义变量，并像其他任何函数一样访问它：</p><pre><code class="language-markdown">.var {name} {John}
+
+My name is .name</code></pre><p>要更改变量的值，用新的参数调用它即可：</p><pre><code class="language-markdown">.name {Jane}</code></pre><h2 id="自定义元素">自定义元素</h2><blockquote><p>参考：<a href="../declaring-functions">声明函数</a> 、<a href="../box">盒子</a></p></blockquote><p>你可以使用 <span class="codespan-content"><code>.function</code></span> 定义自定义函数。函数是可复用的组件，封装了逻辑与内容。在本小节中，我们创建一个生成*示例（Example）*盒子的函数，这在教育类文档中很常见。</p><p>首先定义一个不带参数的函数：</p><pre><code class="language-markdown">.docauthors
+    - ...
+
+.function {example}
+    .box {Example} type:{tip}
+        This is my example!
+
+## Quickstart
+...</code></pre><p>现在调用它：</p><pre><code class="language-markdown">## Quickstart
+
+.example
+
+...</code></pre><p>调用 <span class="codespan-content"><code>.example</code></span> 会生成一个格式良好的盒子。</p><p>让我们通过为盒子内容添加一个参数来增强该函数。参数的语法为 <span class="codespan-content"><code>param1 param2 param3:</code></span>。</p><pre><code class="language-markdown">.function {example}
+    content:
+    .box {Example} type:{tip}
+        .content</code></pre><p>相应地更新调用：</p><pre><code class="language-markdown">.example
+    This is my example!</code></pre><figure><img src="media/custom-element@378979672.png" alt="Custom element" style="width: 650.0px;" /></figure><p>恭喜！你使用<a href="../box">盒子</a> 创建了第一个可复用元素。还有更多布局工具可用，例如<a href="../container">容器</a> 与<a href="../stacks">堆栈</a> 。</p><p>有关自定义元素的高级样式，你可以使用 CSS 规则。更多信息请参阅 <a href="../css">CSS</a> 。</p><blockquote><p>为了简单起见，我们先暂时移除该函数调用：</p><pre><code class="language-diff">- .example
+-    This is my example!</code></pre></blockquote><h2 id="样式化元素">样式化元素</h2><blockquote><p>参考：<a href="../element-styling">元素样式</a> 、<a href="../element-styling-properties">元素样式属性</a> 、<a href="../extending-functions">扩展函数</a></p></blockquote><p>你可以改变内置 Markdown 元素（例如标题与段落）的外观与行为。Quarkdown 提供了一种类似于 Typst 的 <span class="codespan-content"><code>#show</code></span> 规则的机制，基于 <span class="codespan-content"><code>.extend</code></span> 函数，用来拦截并自定义支撑这些元素的原语函数。</p><p>例如，要让所有 2 级标题显示在青蓝色背景上：</p><pre><code class="language-markdown">.extend {heading} where:{depth: .depth::equals {2}}
+    .super background:{teal} foreground:{white}</code></pre><p>现在每一个 <span class="codespan-content"><code>## Heading</code></span> 都会以新样式渲染，而其他层级保持不变。<span class="codespan-content"><code>.super</code></span> 会调用原始函数，并可选择性地覆盖其任意参数。</p><p>要为所有外部链接添加一个图标，你可以拦截 <span class="codespan-content"><code>.link</code></span> 原语函数，并为其内容添加一个<a href="../icons">图标</a> ：</p><pre><code class="language-markdown">.extend {link} where:{url: .url::startswith {https://quarkdown.com}::not}
+    content:
+    .super
+        .content .icon {box-arrow-up-right}</code></pre><p>要将所有段落中的 &ldquo;Quarkdown&rdquo; 一词变为斜体，你可以使用 <a href="../regex-match"><span class="codespan-content"><code>.match</code></span></a> 函数：</p><pre><code class="language-markdown">.extend {paragraph}
+    content:
+    .super
+        .content::match {Quarkdown}
+            *.1*</code></pre><p>在上一个片段中：</p><ul><li><span class="codespan-content"><code>content</code></span> 是从 <span class="codespan-content"><code>.paragraph</code></span> 函数拦截到的参数；</li><li><span class="codespan-content"><code>.content::match {Quarkdown}</code></span> 会在段落内容中查找模式 &ldquo;Quarkdown&rdquo;，并对其应用转换 <span class="codespan-content"><code>*.1*</code></span>，该转换使匹配到的文本变为斜体。<span class="codespan-content"><code>.1</code></span> 是一个<a href="../lambda">隐式 lambda 参数</a> ；</li><li><span class="codespan-content"><code>.super</code></span> 以修改后的内容作为其主体参数被调用。</li></ul><p>对于更复杂的样式需求，你可以通过 <span class="codespan-content"><code>.css</code></span> 使用 <a href="../css">CSS</a> 规则来定位特定元素并应用自定义样式，以及使用 <span class="codespan-content"><code>.cssproperties</code></span> 自定义全局属性。</p><h2 id="编号">编号</h2><blockquote><p>参考：<a href="../numbering">编号</a></p></blockquote><p>许多文档，尤其是学术类文档，都需要对章节、插图、表格、公式与代码等元素进行编号。在 Quarkdown 中，你可以使用 <span class="codespan-content"><code>.numbering</code></span> 函数来实现这一点。</p><blockquote><p>注意：类型为 <span class="codespan-content"><code>paged</code></span> 的文档默认启用了编号。</p></blockquote><p>在文档顶部、内容开始之前添加编号方案：</p><pre><code class="language-markdown">.docauthors
+    - ...
+
+.numbering
+    - headings: 1.1.1
+    - figures: 1.1
+
+.function {example}
+    ...
+
+## Quickstart
+...</code></pre><blockquote><p>这种类似 YAML 的语法表示一种<a href="../dictionary">字典</a> 数据类型。</p></blockquote><figure><img src="media/numbering@-713312105.png" alt="Numbering" style="width: 650.0px;" /></figure><p>编号格式的有效符号为：</p><ul><li><span class="codespan-content"><code>1</code></span> 表示十进制数字</li><li><span class="codespan-content"><code>A</code></span> 表示大写字母</li><li><span class="codespan-content"><code>a</code></span> 表示小写字母</li><li><span class="codespan-content"><code>I</code></span> 表示大写罗马数字</li><li><span class="codespan-content"><code>i</code></span> 表示小写罗马数字</li></ul><p>任何其他字符都被视为字面量文本。</p><h2 id="目录">目录</h2><blockquote><p>参考：<a href="../table-of-contents">目录</a></p></blockquote><p>较长的文档通常在开头包含一个目录，列出所有章节与子章节。</p><p>在 Quarkdown 中，只需在你希望目录出现的位置调用 <span class="codespan-content"><code>.tableofcontents</code></span> 函数：</p><pre><code class="language-markdown">.numbering
+    - ...
+
+.tableofcontents
+
+## Quickstart
+...</code></pre><h2 id="脚注">脚注</h2><blockquote><p>参考：<a href="../footnotes">脚注</a></p></blockquote><p>脚注让你可以添加额外信息，而不会让正文变得杂乱。让我们给引言添加一个脚注：</p><pre><code class="language-markdown">### A Quarkdown tour
+
+No need to reinvent the wheel: you can make text **bold** or *italic*,
+~~strike through~~, add `inline code`,
+create [links](https://quarkdown.com), and much more[^1].
+
+[^1]: All Markdown features are supported in Quarkdown</code></pre><p>这是 GFM 脚注语法，Quarkdown 完全支持。Quarkdown 还支持紧凑脚注，让你可以在引用点就地、行内定义脚注：</p><pre><code class="language-markdown">and much more[^: All Markdown features are supported in Quarkdown].</code></pre><p>在 <span class="codespan-content"><code>plain</code></span> 文档中，脚注出现在引用旁边的页边距中，类似于边注。在 <span class="codespan-content"><code>paged</code></span> 与 <span class="codespan-content"><code>slides</code></span> 文档中，脚注出现在页面或幻灯片的底部。</p><h2 id="交叉引用">交叉引用</h2><blockquote><p>参考：<a href="../cross-references">交叉引用</a></p></blockquote><p>交叉引用让你可以引用文档中其他位置的编号元素。</p><p>首先，为目标元素添加一个 ID。然后使用 <span class="codespan-content"><code>.ref {id}</code></span> 函数引用它。</p><p>以我们的插图为例：</p><pre><code class="language-markdown">!(50%)[Logo](image/logo.png &quot;The Quarkdown logo&quot;)</code></pre><p>为其添加 <span class="codespan-content"><code>logo</code></span> ID，并在正文中引用它：</p><pre><code class="language-markdown">!(50%)[Logo](image/logo.png &quot;The Quarkdown logo&quot;) {#logo}
+
+The Quarkdown logo is shown in .ref {logo}.</code></pre><figure><img src="media/cross-reference@-819368294.png" alt="Cross-reference" style="width: 650.0px;" /></figure><p>请参阅<a href="../cross-references">交叉引用</a> ，了解如何为章节、表格、公式与代码块等其他元素添加 ID。</p><h2 id="页边距与计数器">页边距与计数器</h2><blockquote><p>参考：<a href="../page-format">页面格式</a> 、<a href="../page-margin-content">页边距内容</a> 、<a href="../page-counter">页码</a></p></blockquote><p>在 <span class="codespan-content"><code>paged</code></span> 与 <span class="codespan-content"><code>slides</code></span> 文档中，你通常希望有一个页码，以帮助读者导航并了解自己在文档中的位置。</p><p>首先，通过将文档顶部的 <span class="codespan-content"><code>.doctype</code></span> 值改为 <span class="codespan-content"><code>paged</code></span> 来切换到 <span class="codespan-content"><code>paged</code></span> 文档类型：</p><pre><code class="language-diff">- .doctype {plain}
++ .doctype {paged}</code></pre><blockquote><p>默认页面格式为 A4。你可以使用 <span class="codespan-content"><code>.pageformat</code></span> 函数更改它以及其他属性：</p><pre><code class="language-markdown">.pageformat {letter} margin:{2cm}</code></pre></blockquote><p>现在在每页底部中央添加一个页码：</p><pre><code class="language-markdown">.docauthors
+    - ...
+
+.pagemargin {bottomcenter}
+    .currentpage / .totalpages
+
+.numbering
+    - ...</code></pre><p>现在每一页都会显示其自身的页码与总页数。</p><p><span class="codespan-content"><code>.pagemargin</code></span> 函数可以向每一页添加任意类型的内容。所有可用的页边距位置，请参阅<a href="../page-margin-content">页边距内容</a> 。</p><h3 id="持久标题">持久标题</h3><blockquote><p>参考：<a href="../persistent-headings">持久标题</a></p></blockquote><p>页边距还可以在每一页上显示当前的章节标题。以下示例在左下页边距中显示当前的 1 级标题：</p><pre><code class="language-markdown">.pagemargin {bottomcenter}
+    ...
+
+.pagemargin {bottomleft}
+    .lastheading depth:{1}
+
+.numbering
+    - ...</code></pre><h2 id="多文件项目-2">多文件项目</h2><blockquote><p>参考：<a href="../inclusion-vs-subdocuments">引入 vs. 子文档</a></p></blockquote><p>将大型文档拆分为多个源文件主要有两种方式：引入（inclusion）与子文档（subdocuments）。</p><h3 id="引入文件">引入文件</h3><blockquote><p>参考：<a href="../including-other-quarkdown-files">引入其他 Quarkdown 文件</a></p></blockquote><p><span class="codespan-content"><code>.include</code></span> 函数将另一个 Quarkdown 文件的内容插入到当前文件中。这种方式在 LaTeX 和其他标记语言中很常见，用于将大型文档拆分为更小的、更易管理的文件，例如每个章节一个文件。</p><p>对于我们的快速开始，我们可以将设置与内容拆分为两个独立的文件：</p><blockquote><p>my-document.qd</p></blockquote><pre><code class="language-diff">- .docname {Quickstart}
+- .doctype {paged}
+- .doclang {English}
+- .theme {paperwhite} layout:{latex}
+-
+- .docauthors
+-     - ...
+-
+- .pagemargin {bottomright}
+-     .currentpage / .totalpages
+-
+- .pagemargin {bottomleft}
+-     .lastheading depth:{1}
+-
+- .numbering
+-     - headings: 1.1.1
+-     - figures: 1.1
+-
+- .extend {heading}
+-     ...
+
++ .include {setup.qd}
++ .include {content.qd}
+
+- .tableofcontents
+-
+- # Quickstart
+-
+- ...</code></pre><blockquote><p>setup.qd</p></blockquote><pre><code class="language-markdown">.docname {MyDocument}
+.doctype {paged}
+.doclang {English}
+.theme {paperwhite} layout:{latex}
+
+.docauthors
+    - Quarkdown
+
+.pagemargin {bottomright}
+    .currentpage / .totalpages
+
+.numbering
+    - headings: 1.1.1
+    - figures: 1.1
+
+.extend {heading}
+    ...</code></pre><blockquote><p>content.qd</p></blockquote><pre><code class="language-markdown">.tableofcontents
+
+## Quickstart
+
+...</code></pre><p>这里我们两次使用了 <span class="codespan-content"><code>.include</code></span>。对于数量更多的文件，可以考虑改用 <span class="codespan-content"><code>.includeall</code></span>：</p><pre><code class="language-markdown">.includeall
+    - setup.qd
+    - content.qd</code></pre><h3 id="引用文件">引用文件</h3><blockquote><p>参考：<a href="../subdocuments">子文档</a></p></blockquote><p>第二种方式使用子文档，这在知识库与维基中尤为常见。</p><p>子文档是共享相同设置与配置的内容独立单元。你可以通过链接从其他文档引用它们。</p><blockquote><p>my-document.qd</p></blockquote><pre><code class="language-markdown">- [Introduction](introduction.qd)
+- [Chapter 1](chapter1.qd)
+- [Chapter 2](chapter2.qd)
+- [Conclusion](conclusion.qd)</code></pre><p>你还可以可视化由子文档构成的知识图谱：</p><pre><code class="language-markdown">.subdocumentgraph</code></pre><figure><img src="media/subdocuments@1802505648.png" alt="Subdocuments" style="width: 650.0px;" /></figure><h2 id="静态资源">静态资源</h2><blockquote><p>参考：<a href="../html-static-assets">HTML 静态资源</a></p></blockquote><p>导出为 HTML 时，你可能希望将额外的文件与生成的文档一起发布，例如用于 GitHub Pages 的 <span class="codespan-content"><code>robots.txt</code></span> 或 <span class="codespan-content"><code>CNAME</code></span>。</p><p>为此，在主源文件旁创建一个 <span class="codespan-content"><code>public/</code></span> 目录，并将文件放入其中：</p><div class="file-tree"><ul><li class="file" data-name="my-document.qd">my-document.qd</li><li class="file" data-name="setup.qd">setup.qd</li><li class="file" data-name="content.qd">content.qd</li><li class="directory" data-name="public" data-highlighted="">public<ul><li class="file" data-name="robots.txt">robots.txt</li><li class="file" data-name="CNAME">CNAME</li></ul></li></ul></div><p>Quarkdown 会将 <span class="codespan-content"><code>public/</code></span> 内的所有内容原样复制到输出目录的根目录，不做任何处理。</p><h2 id="结语">结语</h2><p>恭喜！你已经完成了 Quarkdown 快速开始指南，现在熟悉了它的主要功能。你已经准备好创建自己的第一篇真实文档了。</p><p>从这里出发，你可以在本维基的其余部分以及<a href="https://quarkdown.com/docs/quarkdown-stdlib/index.html">文档</a>中探索更高级的主题。</p>
+        <div id="footnote-area">
+          <div class="footnote-rule"></div>
+        </div>
+        <div id="sibling-pages-button-area"></div>
+        <footer>
+          <div class="position-left"></div>
+          <div class="position-center"></div>
+          <div class="position-right"></div>
+        </footer>
+      </main>
+      <aside class="margin-area" id="margin-area-right">
+        <div class="position-top"></div>
+        <div class="position-middle"></div>
+        <div class="position-bottom"></div>
+      </aside>
+    </div>
+  </body>
+</html>

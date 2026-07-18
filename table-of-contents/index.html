@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta name="generator" content="Quarkdown">
+    <meta charset="UTF-8">
+    <link href="/table-of-contents" rel="canonical">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="quarkdown:root-path" content="..">
+    <meta name="quarkdown:search-index" content="../search-index.json">
+    <title>目录 | Quarkdown Wiki</title>
+    <script src="../script/quarkdown.min.js"></script>
+    <script>const capabilities = window.quarkdownCapabilities</script>
+    <script>window.texMacros = {}</script>
+    <link href="../lib/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+    <script src="../lib/highlight.js/highlightjs.min.js"></script>
+    <script src="../lib/highlightjs-line-numbers/highlightjs-line-numbers.min.js"></script>
+    <script src="../lib/highlightjs-copy/highlightjs-copy.min.js"></script>
+    <link href="../lib/highlightjs-copy/highlightjs-copy.min.css" rel="stylesheet">
+    <script>capabilities.code = true;</script>
+    <link href="../theme/theme.css" rel="stylesheet">
+    <style>
+
+</style>
+    <script>prepare(new DocsDocument());</script>
+<template id="sidebar-template"><nav class="sidebar" role="doc-toc"><ol><li data-target-id="基础用法" data-depth="2"><a href="#基础用法">基础用法</a></li><li data-target-id="按文档类型区分的行为" data-depth="2"><a href="#按文档类型区分的行为">按文档类型区分的行为</a></li><li data-target-id="主题" data-depth="2"><a href="#主题">主题</a></li><li data-target-id="忽略特定标题" data-depth="2"><a href="#忽略特定标题">忽略特定标题</a></li><li data-target-id="自定义编号" data-depth="2"><a href="#自定义编号">自定义编号</a></li><li data-target-id="标题选项" data-depth="2"><a href="#标题选项">标题选项</a></li><li data-target-id="高亮条目" data-depth="2"><a href="#高亮条目">高亮条目</a><ol><li data-target-id="使用标记实现章节导航" data-depth="3"><a href="#使用标记实现章节导航">使用标记实现章节导航</a></li></ol></li></ol></nav>
+</template>  </head>
+  <body class="quarkdown quarkdown-docs">
+    <header>
+      <aside class="margin-area"></aside>
+      <main>
+        <div class="search-wrapper">
+          <div class="search-field"><i class="bi bi-search"></i><input type="text" id="search-input" placeholder="Search" autocomplete="off"><kbd>/</kbd></div>
+        </div>
+      </main>
+      <aside class="margin-area"></aside>
+    </header>
+    <div class="content-wrapper">
+      <aside class="margin-area" id="margin-area-left">
+        <div class="position-top"></div>
+        <div class="position-middle"></div>
+        <div class="position-bottom"></div>
+      </aside>
+      <main><style data-hidden="">.page-margin-top-left a {
+    display: flex !important;
+}
+
+header .version {
+    opacity: 0.6 !important;
+    transform: translateY(2px) !important;
+}
+
+.quarkdown-output {
+    padding: 12px 16px !important;
+    border-radius: 8px !important;
+    background-color: var(--box-header-background-color) !important;
+}
+
+.quarkdown-output:empty::after {
+    content: "(No output)" !important;
+    color: var(--qd-main-color-muted) !important;
+}
+
+.quarkdown-output :is(h1, h2, h3, h4, h5, h6) {
+    padding: 0 !important;
+    border: none !important;
+}
+
+.quarkdown-output :is(h1, h2, h3, h4, h5, h6):first-child {
+    margin-top: 0 !important;
+}
+
+.quarkdown-output .file-tree:only-child {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.quarkdown-output img[src*="sky"] {
+    max-width: 50% !important;
+}
+
+.box:has(.quarkdown-output) pre {
+    margin-bottom: 16px !important;
+}</style><div class="page-margin-content page-margin-top-left" data-on-left-page="top-left" data-on-right-page="top-left"><div style="justify-content: flex-start; align-items: center; column-gap: 12.0px;" class="stack stack-row"><p><a href="https://quarkdown.com"><img src="media/banner-light@306139514.svg" alt="Quarkdown" /></a></p><a href="https://github.com/iamgio/quarkdown/releases/latest"><span class="version">v2.4.0
+</span></a></div></div><div class="page-margin-content page-margin-top-right" data-on-left-page="top-right" data-on-right-page="top-right"><div style="justify-content: flex-start; align-items: center;" class="stack stack-row"><p><a href="https://quarkdown.com/docs">文档</a></p><hr /><p><a href="https://github.com/iamgio/quarkdown"><i class="icon-image bi bi-github" aria-hidden="true"></i></a></p></div></div><div class="page-margin-content page-margin-left-top" data-on-left-page="left-top" data-on-right-page="left-top"><nav role="navigation" data-role="page-list"><h3 id="入门" data-decorative="">入门</h3><ul><li><a href="../quickstart">快速开始</a></li><li><a href="../agent-skill">AI 智能体技能</a></li><li><a href="../cli-options">命令行选项</a></li></ul><h3 id="文档" data-decorative="">文档</h3><ul><li><a href="https://quarkdown.com/docs/quarkdown-stdlib/">稳定版 ↗</a></li><li><a href="https://quarkdown.com/docs/latest/quarkdown-stdlib/">最新构建 ↗</a></li></ul><h3 id="函数" data-decorative="">函数</h3><ul><li><a href="../syntax-of-a-function-call">函数调用语法</a><ul><li><a href="../syntax-of-a-function-call#chaining-calls">链式调用</a></li><li><a href="../syntax-of-a-function-call#block-vs-inline-function-calls">块级与行内调用</a></li></ul></li><li><a href="../declaring-functions">声明函数</a></li><li><a href="../extending-functions">扩展函数</a></li><li><a href="../typing">动态类型</a></li><li><a href="../localization">本地化</a></li></ul><h3 id="文档设置" data-decorative="">文档设置</h3><ul><li><a href="../document-metadata">文档元数据</a><ul><li><a href="../document-types">文档类型</a></li></ul></li><li><a href="../themes">主题</a></li><li><a href="../element-styling">元素样式</a><ul><li><a href="../element-styling-properties">样式属性</a></li></ul></li><li><a href="../font-configuration">字体</a></li><li><a href="../page-format">页面格式</a><ul><li><a href="../multi-column-layout">多栏布局</a></li></ul></li><li><a href="../page-margin-content">页边距内容</a></li><li><a href="../page-counter">页码</a></li><li><a href="../persistent-headings">持久标题</a></li><li><a href="../numbering">编号</a></li><li><a href="../paragraph-style">段落样式</a></li><li><a href="../caption-position">标题位置</a></li><li><a href="../table-of-contents" aria-current="page">目录</a></li><li><a href="../bibliography">参考文献</a></li><li><a href="../footnotes">脚注</a></li><li><a href="../book-cover">书籍封面</a></li></ul><h3 id="markdown-增强" data-decorative="">Markdown 增强</h3><ul><li><a href="../figure">插图</a></li><li><a href="../image-size">图片尺寸</a></li><li><a href="../tex-formulae">TeX 公式</a></li><li><a href="../table-caption">表格标题</a></li><li><a href="../code-caption">代码标题</a></li><li><a href="../decorative-headings">装饰性标题</a></li><li><a href="../quote-types">提示框（引用类型）</a></li><li><a href="../quotation-source">引用来源</a></li><li><a href="../cross-references">交叉引用</a></li><li><a href="../page-break">分页符</a><ul><li><a href="../page-break#automatic-break">自动分页</a></li></ul></li><li><a href="../text-symbols">文本符号</a></li><li><a href="../keybindings">快捷键</a></li><li><a href="../icons">图标</a></li><li><a href="../emojis">表情符号</a></li><li><a href="../primitives">基础函数</a><ul><li><a href="../headings">标题</a></li></ul></li></ul><h3 id="布局" data-decorative="">布局</h3><ul><li><a href="../stacks">堆栈：行、列、网格</a></li><li><a href="../container">容器</a></li><li><a href="../align">对齐</a></li><li><a href="../float">浮动</a></li><li><a href="../custom-figure">插图</a></li><li><a href="../clip">裁剪</a></li><li><a href="../box">盒子</a></li><li><a href="../file-tree">文件树</a></li><li><a href="../collapsible">可折叠</a></li><li><a href="../landscape-content">横向内容</a></li><li><a href="../whitespace">空白</a></li></ul><h3 id="多文件项目" data-decorative="">多文件项目</h3><ul><li><a href="../including-other-quarkdown-files">引入其他 Quarkdown 文件</a></li><li><a href="../subdocuments">引用其他 Quarkdown 文件</a><ul><li><a href="../inclusion-vs-subdocuments">引入 vs. 引用</a></li></ul></li><li><a href="../importing-external-libraries">导入外部库</a></li></ul><h3 id="变量与脚本" data-decorative="">变量与脚本</h3><ul><li><a href="../variables">变量</a></li><li><a href="../none">可选项</a></li><li><a href="../math">数学运算</a></li><li><a href="../conditional-statements">条件语句</a></li><li><a href="../loops">循环</a></li><li><a href="../let">Let</a></li><li><a href="../destructuring">解构</a></li></ul><h3 id="数据与表格" data-decorative="">数据与表格</h3><ul><li><a href="../table-manipulation">表格操作</a></li><li><a href="../table-generation">表格生成</a></li><li><a href="../file-data#file-text-content">从文件读取文本内容</a></li><li><a href="../file-data#table-from-csv">从 CSV 数据生成表格</a></li><li><a href="../listing-files">列出文件</a></li></ul><h3 id="图表与图示" data-decorative="">图表与图示</h3><ul><li><a href="../xy-chart">XY 图表</a></li><li><a href="../mermaid-diagrams">Mermaid 图表</a></li></ul><h3 id="文本与代码" data-decorative="">文本与代码</h3><ul><li><a href="../regex-match">基于正则的样式</a></li><li><a href="../text">高级文本格式化</a></li><li><a href="../code">高级代码块</a></li><li><a href="../line-breaks">显式换行</a></li><li><a href="../tex-macros">TeX 宏</a></li></ul><h3 id="幻灯片" data-decorative="">幻灯片</h3><ul><li><a href="../slides-configuration">幻灯片配置</a></li><li><a href="../slides-fragment">交互式片段</a></li><li><a href="../slides-speaker-notes">演讲者备注</a></li></ul><h3 id="html" data-decorative="">HTML</h3><ul><li><a href="../html">HTML</a></li><li><a href="../css">CSS</a></li><li><a href="../html-options">HTML 选项</a></li><li><a href="../html-static-assets">静态资源</a></li></ul><h3 id="值类型" data-decorative="">值类型</h3><ul><li>String</li><li>Number</li><li><a href="../markdown-content">Markdown 内容</a></li><li><a href="../boolean">布尔值</a></li><li><a href="../none">None</a></li><li><a href="../enumeration-entry">枚举项</a></li><li><a href="../iterable">可迭代对象</a></li><li><a href="../dictionary">字典</a></li><li><a href="../range">范围</a></li><li><a href="../lambda">Lambda</a></li><li><a href="../sizes">尺寸</a></li><li><a href="../color">颜色</a></li><li><a href="../typing">动态类型</a></li></ul><h3 id="内置库" data-decorative="">内置库</h3><ul><li><a href="../docs-library">Docs：文档项目</a></li><li><a href="../paper-library">Paper：摘要、定义、定理</a></li></ul><h3 id="流程" data-decorative="">流程</h3><ul><li><a href="../environment">环境变量</a></li></ul><h3 id="资源与日志" data-decorative="">资源与日志</h3><ul><li><a href="../media-storage">媒体存储</a></li><li><a href="../logging">日志</a></li></ul><h3 id="命令行工具" data-decorative="">命令行工具</h3><ul><li><a href="../cli-compiler">编译器</a></li><li><a href="../pdf-export">导出为 PDF</a></li><li><a href="../cli-project-creator">项目创建器</a></li><li><a href="../cli-webserver">Web 服务器</a></li><li><a href="../cli-doctor">诊断工具</a></li></ul><h3 id="quarkdown-内部原理" data-decorative="">Quarkdown 内部原理</h3><ul><li><a href="../pipeline">Quarkdown 的处理管线</a><ul><li><a href="../pipeline---lexing">词法分析</a></li><li><a href="../pipeline---parsing">语法解析</a></li><li><a href="../pipeline---function-call-expansion">函数调用展开</a></li><li><a href="../pipeline---tree-rewrite">树重写</a></li><li><a href="../pipeline---tree-traversal">树遍历</a></li><li><a href="../pipeline---rendering">渲染</a></li><li><a href="../pipeline---post-rendering">后渲染</a></li></ul></li><li><a href="../inside-live-preview">实时预览是如何工作的？</a></li></ul></nav></div><div class="page-margin-content page-margin-right-top" data-on-left-page="right-top" data-on-right-page="right-top"><h3 id="table-of-contents">本页目录</h3><nav role="table-of-contents" data-role="table-of-contents"><ol><li data-target-id="基础用法" data-depth="2"><a href="#基础用法">基础用法</a></li><li data-target-id="按文档类型区分的行为" data-depth="2"><a href="#按文档类型区分的行为">按文档类型区分的行为</a></li><li data-target-id="主题" data-depth="2"><a href="#主题">主题</a></li><li data-target-id="忽略特定标题" data-depth="2"><a href="#忽略特定标题">忽略特定标题</a></li><li data-target-id="自定义编号" data-depth="2"><a href="#自定义编号">自定义编号</a></li><li data-target-id="标题选项" data-depth="2"><a href="#标题选项">标题选项</a></li><li data-target-id="高亮条目" data-depth="2"><a href="#高亮条目">高亮条目</a><ol><li data-target-id="使用标记实现章节导航" data-depth="3"><a href="#使用标记实现章节导航">使用标记实现章节导航</a></li></ol></li></ol></nav></div><h1 id="目录" data-decorative="">目录</h1><p>目录通过以可视化层级展示指向各个标题的链接，为你的文档提供快速概览。读者可以点击任意条目，直接跳转到对应小节。你现在就可以在右侧边栏看到一份目录，如果你正在使用移动设备，它则会出现在页面末尾。</p><p>你可以通过 <strong><span class="codespan-content"><code>.tableofcontents</code></span></strong> <sup><a href="https://quarkdown.com/docs/quarkdown-stdlib/com.quarkdown.stdlib.module.Document/tableofcontents.html" target="_blank">文档 ↗</a></sup> 函数来显示目录。</p><h2 id="基础用法">基础用法</h2><p>该函数接受以下可选参数：</p><table><thead><tr><th>参数</th><th>说明</th><th>可接受值</th><th>默认值</th></tr></thead><tbody><tr><td><span class="codespan-content"><code>title</code></span></td><td>位于目录之前的标题。如果未设置，则会自动本地化。</td><td>行内内容</td><td>若 <a href="../document-metadata"><span class="codespan-content"><code>.doclang</code></span></a> 的区域受支持，则自动本地化（例如英文下为 <span class="codespan-content"><code>Table of Contents</code></span>）</td></tr><tr><td><span class="codespan-content"><code>maxdepth</code></span></td><td>要显示的标题最大层级。例如，<span class="codespan-content"><code>maxdepth:{2}</code></span> 会收集 <span class="codespan-content"><code>#</code></span> 与 <span class="codespan-content"><code>##</code></span> 标题，但不包括 <span class="codespan-content"><code>###</code></span> 或更深的标题。</td><td>整数</td><td><span class="codespan-content"><code>3</code></span></td></tr></tbody></table><div class="box tip"><header><h4>示例 1</h4></header><div class="box-content"><pre><code class="language-markdown nohljsln">.tableofcontents maxdepth:{2}
+
+## A
+
+...
+
+### A.A
+
+...
+
+### A.B
+
+...
+
+## B
+
+...
+
+## C
+
+### C.A
+
+#### C.A.A
+
+...</code></pre><div class="container fullwidth quarkdown-output"><figure><img src="media/basic@932687540.png" alt="Table of contents" style="width: 550.0px;" /></figure></div></div></div><h2 id="按文档类型区分的行为">按文档类型区分的行为</h2><p>目录会适应不同的文档类型：</p><ul><li>在 <strong><span class="codespan-content"><code>paged</code></span></strong> 与 <strong><span class="codespan-content"><code>slides</code></span></strong> 文档中，每个条目还会显示对应的页码。</li><li>在 <strong><span class="codespan-content"><code>slides</code></span></strong> 文档中，目录具有受限的高度，并在内容溢出时变为可垂直滚动。</li></ul><h2 id="主题">主题</h2><p><a href="../themes">布局主题</a> 会极大地影响目录的外观。</p><div class="box tip"><header><h4>示例 2</h4></header><div class="box-content"><figure><img src="media/minimal-theme@-853859451.png" alt="Table of contents with minimal theme" title="&lsquo;minimal&rsquo; theme" style="width: 550.0px;" /><figcaption class="caption-bottom" data-localized-kind="图">&lsquo;minimal&rsquo; theme</figcaption></figure></div></div><h2 id="忽略特定标题">忽略特定标题</h2><p>有时你希望某些标题出现在文档中，却不出现在目录里。<a href="../headings#decorative-headings">装饰性标题</a>正是为此而生：它们不被编号，且被排除在目录之外。</p><p>要将一个标题标记为装饰性，只需在最后一个 <span class="codespan-content"><code>#</code></span> 符号后追加 <span class="codespan-content"><code>!</code></span>：</p><pre><code class="language-markdown">##! A decorative heading</code></pre><h2 id="自定义编号">自定义编号</h2><p>你可以通过 <span class="codespan-content"><code>.numbering</code></span> 函数自定义目录中标题的编号方式。更多信息请参阅<a href="../numbering">编号</a> 。</p><h2 id="标题选项">标题选项</h2><p>位于目录之前的标题，可以通过以下参数进行自定义：</p><table><thead><tr><th>参数</th><th>说明</th><th>可接受值</th><th>默认值</th></tr></thead><tbody><tr><td><span class="codespan-content"><code>headingdepth</code></span></td><td>位于目录之前的标题层级。</td><td>整数</td><td>取决于文档类型（大多数情况下为 1，对于 <span class="codespan-content"><code>docs</code></span> 为 3）</td></tr><tr><td><span class="codespan-content"><code>breakpage</code></span></td><td>该标题是否触发自动<a href="../page-break#automatic-break">分页</a>。</td><td>布尔值</td><td><span class="codespan-content"><code>yes</code></span></td></tr><tr><td><span class="codespan-content"><code>numberheading</code></span></td><td>该标题是否应被<a href="../numbering">编号</a> ，并在文档层级中跟踪其位置。</td><td>布尔值</td><td><span class="codespan-content"><code>no</code></span></td></tr><tr><td><span class="codespan-content"><code>indexheading</code></span></td><td>该标题是否应被纳入目录本身。会隐式启用 <span class="codespan-content"><code>numberheading</code></span>。</td><td>布尔值</td><td><span class="codespan-content"><code>no</code></span></td></tr></tbody></table><h2 id="高亮条目">高亮条目</h2><p><span class="codespan-content"><code>focus</code></span> 参数会高亮目录中的某个特定条目，将注意力吸引到当前小节。</p><div class="box tip"><header><h4>示例 3</h4></header><div class="box-content"><p>在之前的示例中添加 <span class="codespan-content"><code>focus:{A.B}</code></span> 会高亮该条目：</p><pre><code class="language-markdown nohljsln">.tableofcontents maxdepth:{2} focus:{A.B}</code></pre><div class="container fullwidth quarkdown-output"><figure><img src="media/focused@1635480447.png" alt="Table of contents with focus" style="width: 550.0px;" /></figure></div></div></div><p>这个功能在演示中尤为有用，你可能希望在每一章开头显示一个迷你目录，以引导观众。</p><h3 id="使用标记实现章节导航">使用标记实现章节导航</h3><p>对于幻灯片演示，你可以将 <span class="codespan-content"><code>focus</code></span> 与**标记（markers）**结合，创建优雅的章节导航。<span class="codespan-content"><code>.marker</code></span> 函数创建一个不可见的 0 级标题，这是标准的 <span class="codespan-content"><code>#</code></span> 语法通常无法做到的。</p><p>下面是一个适用于章节幻灯片的实际模式：</p><pre><code class="language-markdown">.function {chapter}
+    name:
+    .tableofcontents maxdepth:{0} focus:{.name}
+    .marker {.name}</code></pre><p>随后你可以在每个小节的开头用 <span class="codespan-content"><code>.chapter {My chapter}</code></span> 调用它。设置 <span class="codespan-content"><code>maxdepth:{0}</code></span> 可确保目录中只出现标记，从而创建一个干净的章节级概览，而不是显示所有标题。</p>
+        <div id="footnote-area">
+          <div class="footnote-rule"></div>
+        </div>
+        <div id="sibling-pages-button-area"></div>
+        <footer>
+          <div class="position-left"></div>
+          <div class="position-center"></div>
+          <div class="position-right"></div>
+        </footer>
+      </main>
+      <aside class="margin-area" id="margin-area-right">
+        <div class="position-top"></div>
+        <div class="position-middle"></div>
+        <div class="position-bottom"></div>
+      </aside>
+    </div>
+  </body>
+</html>

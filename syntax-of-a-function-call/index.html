@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta name="generator" content="Quarkdown">
+    <meta charset="UTF-8">
+    <link href="/syntax-of-a-function-call" rel="canonical">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="quarkdown:root-path" content="..">
+    <meta name="quarkdown:search-index" content="../search-index.json">
+    <title>函数调用语法 | Quarkdown Wiki</title>
+    <script src="../script/quarkdown.min.js"></script>
+    <script>const capabilities = window.quarkdownCapabilities</script>
+    <script>window.texMacros = {}</script>
+    <link href="../lib/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+    <script src="../lib/highlight.js/highlightjs.min.js"></script>
+    <script src="../lib/highlightjs-line-numbers/highlightjs-line-numbers.min.js"></script>
+    <script src="../lib/highlightjs-copy/highlightjs-copy.min.js"></script>
+    <link href="../lib/highlightjs-copy/highlightjs-copy.min.css" rel="stylesheet">
+    <script>capabilities.code = true;</script>
+    <link href="../lib/katex/katex.min.css" rel="stylesheet">
+    <script src="../lib/katex/katex.min.js" defer="true"></script>
+    <script>capabilities.math = true;</script>
+    <link href="../theme/theme.css" rel="stylesheet">
+    <style>
+
+</style>
+    <script>prepare(new DocsDocument());</script>
+<template id="sidebar-template"><nav class="sidebar" role="doc-toc"><ol><li data-target-id="基础语法" data-depth="2"><a href="#基础语法">基础语法</a></li><li data-target-id="位置参数与命名参数" data-depth="2"><a href="#位置参数与命名参数">位置参数与命名参数</a></li><li data-target-id="多行参数" data-depth="2"><a href="#多行参数">多行参数</a></li><li data-target-id="行续接" data-depth="2"><a href="#行续接">行续接</a></li><li data-target-id="嵌套函数调用" data-depth="2"><a href="#嵌套函数调用">嵌套函数调用</a></li><li data-target-id="链式调用" data-depth="2"><a href="#链式调用">链式调用</a></li><li data-target-id="紧凑函数调用" data-depth="2"><a href="#紧凑函数调用">紧凑函数调用</a></li><li data-target-id="行内与块级函数调用" data-depth="2"><a href="#行内与块级函数调用">行内与块级函数调用</a><ol><li data-target-id="行内调用" data-depth="3"><a href="#行内调用">行内调用</a></li><li data-target-id="块级调用" data-depth="3"><a href="#块级调用">块级调用</a></li><li data-target-id="主体参数" data-depth="3"><a href="#主体参数">主体参数</a></li><li data-target-id="在主体参数中嵌套函数" data-depth="3"><a href="#在主体参数中嵌套函数">在主体参数中嵌套函数</a></li></ol></li></ol></nav>
+</template>  </head>
+  <body class="quarkdown quarkdown-docs">
+    <header>
+      <aside class="margin-area"></aside>
+      <main>
+        <div class="search-wrapper">
+          <div class="search-field"><i class="bi bi-search"></i><input type="text" id="search-input" placeholder="Search" autocomplete="off"><kbd>/</kbd></div>
+        </div>
+      </main>
+      <aside class="margin-area"></aside>
+    </header>
+    <div class="content-wrapper">
+      <aside class="margin-area" id="margin-area-left">
+        <div class="position-top"></div>
+        <div class="position-middle"></div>
+        <div class="position-bottom"></div>
+      </aside>
+      <main><style data-hidden="">.page-margin-top-left a {
+    display: flex !important;
+}
+
+header .version {
+    opacity: 0.6 !important;
+    transform: translateY(2px) !important;
+}
+
+.quarkdown-output {
+    padding: 12px 16px !important;
+    border-radius: 8px !important;
+    background-color: var(--box-header-background-color) !important;
+}
+
+.quarkdown-output:empty::after {
+    content: "(No output)" !important;
+    color: var(--qd-main-color-muted) !important;
+}
+
+.quarkdown-output :is(h1, h2, h3, h4, h5, h6) {
+    padding: 0 !important;
+    border: none !important;
+}
+
+.quarkdown-output :is(h1, h2, h3, h4, h5, h6):first-child {
+    margin-top: 0 !important;
+}
+
+.quarkdown-output .file-tree:only-child {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.quarkdown-output img[src*="sky"] {
+    max-width: 50% !important;
+}
+
+.box:has(.quarkdown-output) pre {
+    margin-bottom: 16px !important;
+}</style><div class="page-margin-content page-margin-top-left" data-on-left-page="top-left" data-on-right-page="top-left"><div style="justify-content: flex-start; align-items: center; column-gap: 12.0px;" class="stack stack-row"><p><a href="https://quarkdown.com"><img src="media/banner-light@306139514.svg" alt="Quarkdown" /></a></p><a href="https://github.com/iamgio/quarkdown/releases/latest"><span class="version">v2.4.0
+</span></a></div></div><div class="page-margin-content page-margin-top-right" data-on-left-page="top-right" data-on-right-page="top-right"><div style="justify-content: flex-start; align-items: center;" class="stack stack-row"><p><a href="https://quarkdown.com/docs">文档</a></p><hr /><p><a href="https://github.com/iamgio/quarkdown"><i class="icon-image bi bi-github" aria-hidden="true"></i></a></p></div></div><div class="page-margin-content page-margin-left-top" data-on-left-page="left-top" data-on-right-page="left-top"><nav role="navigation" data-role="page-list"><h3 id="入门" data-decorative="">入门</h3><ul><li><a href="../quickstart">快速开始</a></li><li><a href="../agent-skill">AI 智能体技能</a></li><li><a href="../cli-options">命令行选项</a></li></ul><h3 id="文档" data-decorative="">文档</h3><ul><li><a href="https://quarkdown.com/docs/quarkdown-stdlib/">稳定版 ↗</a></li><li><a href="https://quarkdown.com/docs/latest/quarkdown-stdlib/">最新构建 ↗</a></li></ul><h3 id="函数" data-decorative="">函数</h3><ul><li><a href="../syntax-of-a-function-call" aria-current="page">函数调用语法</a><ul><li><a href="../syntax-of-a-function-call#chaining-calls" aria-current="page">链式调用</a></li><li><a href="../syntax-of-a-function-call#block-vs-inline-function-calls" aria-current="page">块级与行内调用</a></li></ul></li><li><a href="../declaring-functions">声明函数</a></li><li><a href="../extending-functions">扩展函数</a></li><li><a href="../typing">动态类型</a></li><li><a href="../localization">本地化</a></li></ul><h3 id="文档设置" data-decorative="">文档设置</h3><ul><li><a href="../document-metadata">文档元数据</a><ul><li><a href="../document-types">文档类型</a></li></ul></li><li><a href="../themes">主题</a></li><li><a href="../element-styling">元素样式</a><ul><li><a href="../element-styling-properties">样式属性</a></li></ul></li><li><a href="../font-configuration">字体</a></li><li><a href="../page-format">页面格式</a><ul><li><a href="../multi-column-layout">多栏布局</a></li></ul></li><li><a href="../page-margin-content">页边距内容</a></li><li><a href="../page-counter">页码</a></li><li><a href="../persistent-headings">持久标题</a></li><li><a href="../numbering">编号</a></li><li><a href="../paragraph-style">段落样式</a></li><li><a href="../caption-position">标题位置</a></li><li><a href="../table-of-contents">目录</a></li><li><a href="../bibliography">参考文献</a></li><li><a href="../footnotes">脚注</a></li><li><a href="../book-cover">书籍封面</a></li></ul><h3 id="markdown-增强" data-decorative="">Markdown 增强</h3><ul><li><a href="../figure">插图</a></li><li><a href="../image-size">图片尺寸</a></li><li><a href="../tex-formulae">TeX 公式</a></li><li><a href="../table-caption">表格标题</a></li><li><a href="../code-caption">代码标题</a></li><li><a href="../decorative-headings">装饰性标题</a></li><li><a href="../quote-types">提示框（引用类型）</a></li><li><a href="../quotation-source">引用来源</a></li><li><a href="../cross-references">交叉引用</a></li><li><a href="../page-break">分页符</a><ul><li><a href="../page-break#automatic-break">自动分页</a></li></ul></li><li><a href="../text-symbols">文本符号</a></li><li><a href="../keybindings">快捷键</a></li><li><a href="../icons">图标</a></li><li><a href="../emojis">表情符号</a></li><li><a href="../primitives">基础函数</a><ul><li><a href="../headings">标题</a></li></ul></li></ul><h3 id="布局" data-decorative="">布局</h3><ul><li><a href="../stacks">堆栈：行、列、网格</a></li><li><a href="../container">容器</a></li><li><a href="../align">对齐</a></li><li><a href="../float">浮动</a></li><li><a href="../custom-figure">插图</a></li><li><a href="../clip">裁剪</a></li><li><a href="../box">盒子</a></li><li><a href="../file-tree">文件树</a></li><li><a href="../collapsible">可折叠</a></li><li><a href="../landscape-content">横向内容</a></li><li><a href="../whitespace">空白</a></li></ul><h3 id="多文件项目" data-decorative="">多文件项目</h3><ul><li><a href="../including-other-quarkdown-files">引入其他 Quarkdown 文件</a></li><li><a href="../subdocuments">引用其他 Quarkdown 文件</a><ul><li><a href="../inclusion-vs-subdocuments">引入 vs. 引用</a></li></ul></li><li><a href="../importing-external-libraries">导入外部库</a></li></ul><h3 id="变量与脚本" data-decorative="">变量与脚本</h3><ul><li><a href="../variables">变量</a></li><li><a href="../none">可选项</a></li><li><a href="../math">数学运算</a></li><li><a href="../conditional-statements">条件语句</a></li><li><a href="../loops">循环</a></li><li><a href="../let">Let</a></li><li><a href="../destructuring">解构</a></li></ul><h3 id="数据与表格" data-decorative="">数据与表格</h3><ul><li><a href="../table-manipulation">表格操作</a></li><li><a href="../table-generation">表格生成</a></li><li><a href="../file-data#file-text-content">从文件读取文本内容</a></li><li><a href="../file-data#table-from-csv">从 CSV 数据生成表格</a></li><li><a href="../listing-files">列出文件</a></li></ul><h3 id="图表与图示" data-decorative="">图表与图示</h3><ul><li><a href="../xy-chart">XY 图表</a></li><li><a href="../mermaid-diagrams">Mermaid 图表</a></li></ul><h3 id="文本与代码" data-decorative="">文本与代码</h3><ul><li><a href="../regex-match">基于正则的样式</a></li><li><a href="../text">高级文本格式化</a></li><li><a href="../code">高级代码块</a></li><li><a href="../line-breaks">显式换行</a></li><li><a href="../tex-macros">TeX 宏</a></li></ul><h3 id="幻灯片" data-decorative="">幻灯片</h3><ul><li><a href="../slides-configuration">幻灯片配置</a></li><li><a href="../slides-fragment">交互式片段</a></li><li><a href="../slides-speaker-notes">演讲者备注</a></li></ul><h3 id="html" data-decorative="">HTML</h3><ul><li><a href="../html">HTML</a></li><li><a href="../css">CSS</a></li><li><a href="../html-options">HTML 选项</a></li><li><a href="../html-static-assets">静态资源</a></li></ul><h3 id="值类型" data-decorative="">值类型</h3><ul><li>String</li><li>Number</li><li><a href="../markdown-content">Markdown 内容</a></li><li><a href="../boolean">布尔值</a></li><li><a href="../none">None</a></li><li><a href="../enumeration-entry">枚举项</a></li><li><a href="../iterable">可迭代对象</a></li><li><a href="../dictionary">字典</a></li><li><a href="../range">范围</a></li><li><a href="../lambda">Lambda</a></li><li><a href="../sizes">尺寸</a></li><li><a href="../color">颜色</a></li><li><a href="../typing">动态类型</a></li></ul><h3 id="内置库" data-decorative="">内置库</h3><ul><li><a href="../docs-library">Docs：文档项目</a></li><li><a href="../paper-library">Paper：摘要、定义、定理</a></li></ul><h3 id="流程" data-decorative="">流程</h3><ul><li><a href="../environment">环境变量</a></li></ul><h3 id="资源与日志" data-decorative="">资源与日志</h3><ul><li><a href="../media-storage">媒体存储</a></li><li><a href="../logging">日志</a></li></ul><h3 id="命令行工具" data-decorative="">命令行工具</h3><ul><li><a href="../cli-compiler">编译器</a></li><li><a href="../pdf-export">导出为 PDF</a></li><li><a href="../cli-project-creator">项目创建器</a></li><li><a href="../cli-webserver">Web 服务器</a></li><li><a href="../cli-doctor">诊断工具</a></li></ul><h3 id="quarkdown-内部原理" data-decorative="">Quarkdown 内部原理</h3><ul><li><a href="../pipeline">Quarkdown 的处理管线</a><ul><li><a href="../pipeline---lexing">词法分析</a></li><li><a href="../pipeline---parsing">语法解析</a></li><li><a href="../pipeline---function-call-expansion">函数调用展开</a></li><li><a href="../pipeline---tree-rewrite">树重写</a></li><li><a href="../pipeline---tree-traversal">树遍历</a></li><li><a href="../pipeline---rendering">渲染</a></li><li><a href="../pipeline---post-rendering">后渲染</a></li></ul></li><li><a href="../inside-live-preview">实时预览是如何工作的？</a></li></ul></nav></div><div class="page-margin-content page-margin-right-top" data-on-left-page="right-top" data-on-right-page="right-top"><h3 id="table-of-contents">本页目录</h3><nav role="table-of-contents" data-role="table-of-contents"><ol><li data-target-id="基础语法" data-depth="2"><a href="#基础语法">基础语法</a></li><li data-target-id="位置参数与命名参数" data-depth="2"><a href="#位置参数与命名参数">位置参数与命名参数</a></li><li data-target-id="多行参数" data-depth="2"><a href="#多行参数">多行参数</a></li><li data-target-id="行续接" data-depth="2"><a href="#行续接">行续接</a></li><li data-target-id="嵌套函数调用" data-depth="2"><a href="#嵌套函数调用">嵌套函数调用</a></li><li data-target-id="链式调用" data-depth="2"><a href="#链式调用">链式调用</a></li><li data-target-id="紧凑函数调用" data-depth="2"><a href="#紧凑函数调用">紧凑函数调用</a></li><li data-target-id="行内与块级函数调用" data-depth="2"><a href="#行内与块级函数调用">行内与块级函数调用</a><ol><li data-target-id="行内调用" data-depth="3"><a href="#行内调用">行内调用</a></li><li data-target-id="块级调用" data-depth="3"><a href="#块级调用">块级调用</a></li><li data-target-id="主体参数" data-depth="3"><a href="#主体参数">主体参数</a></li><li data-target-id="在主体参数中嵌套函数" data-depth="3"><a href="#在主体参数中嵌套函数">在主体参数中嵌套函数</a></li></ol></li></ol></nav></div><h1 id="函数调用语法" data-decorative="">函数调用语法</h1><p><strong>函数</strong>是 Quarkdown 的核心特性，正是它使 Quarkdown 有别于其他 Markdown 变体以及许多其他标记语言。函数从外部库中加载，这些库既可以是原生的（例如 <a href="https://github.com/iamgio/quarkdown/tree/main/quarkdown-stdlib/src/main/kotlin/com/quarkdown/stdlib"><span>标准库</span></a>），也可以是在 Quarkdown 源文件中定义的，它们分为不同的类别：</p><table><thead><tr><th>类别</th><th>示例</th></tr></thead><tbody><tr><td>布局规则</td><td><span class="codespan-content"><code>row</code></span>、<span class="codespan-content"><code>column</code></span>、<span class="codespan-content"><code>grid</code></span>、<span class="codespan-content"><code>center</code></span></td></tr><tr><td>实用视图</td><td><span class="codespan-content"><code>tableofcontents</code></span>、<span class="codespan-content"><code>whitespace</code></span></td></tr><tr><td>数学与逻辑运算</td><td><span class="codespan-content"><code>sum</code></span>、<span class="codespan-content"><code>divide</code></span>、<span class="codespan-content"><code>pow</code></span>、<span class="codespan-content"><code>sin</code></span>、<span class="codespan-content"><code>isgreater</code></span></td></tr><tr><td>控制结构与语句</td><td><span class="codespan-content"><code>if</code></span>、<span class="codespan-content"><code>foreach</code></span>、<span class="codespan-content"><code>repeat</code></span>、<span class="codespan-content"><code>var</code></span>、<span class="codespan-content"><code>let</code></span>、<span class="codespan-content"><code>function</code></span></td></tr><tr><td>文件数据</td><td><span class="codespan-content"><code>include</code></span>、<span class="codespan-content"><code>csv</code></span>、<span class="codespan-content"><code>read</code></span></td></tr><tr><td>文档元数据的修改</td><td><span class="codespan-content"><code>docname</code></span>、<span class="codespan-content"><code>docauthor</code></span>、<span class="codespan-content"><code>doctype</code></span>、<span class="codespan-content"><code>theme</code></span>、<span class="codespan-content"><code>pageformat</code></span></td></tr></tbody></table><h2 id="基础语法">基础语法</h2><p>当从 Quarkdown 源文件中调用函数时，函数名前需加一个 <span class="codespan-content"><code>.</code></span>（点），每个参数都用花括号包裹。</p><pre><code class="language-markdown">.myfunction {arg1} {arg2}</code></pre><div class="box tip"><header><h4>示例 1</h4></header><div class="box-content"><pre><code class="language-markdown nohljsln">.multiply {6} {3}</code></pre><div class="container fullwidth quarkdown-output"><p>18</p></div></div></div><h2 id="位置参数与命名参数">位置参数与命名参数</h2><p>在前面的代码片段中，<span class="codespan-content"><code>arg1</code></span> 与 <span class="codespan-content"><code>arg2</code></span> 分别指代函数签名中的第一个与第二个参数。这些被称为<em>位置参数</em>，因为它们的含义由其在调用中的位置决定。</p><p>参数也可以按名称来指代某个参数。这些<em>命名参数</em>使用 <span class="codespan-content"><code>name:{arg}</code></span> 语法。</p><pre><code class="language-markdown">.myfunction firstparam:{arg1} secondparam:{arg2}</code></pre><div class="box tip"><header><h4>示例 2</h4></header><div class="box-content"><p>你可以混合使用位置参数与命名参数，以提高函数调用的可读性，只要所有跟在命名参数之后的参数同样也是命名的即可。</p><pre><code class="language-markdown nohljsln">.multiply {6} by:{3}</code></pre><div class="container fullwidth quarkdown-output"><p>18</p></div></div></div><h2 id="多行参数">多行参数</h2><p>参数可以跨越多行。缩进是可选且任意的。</p><div class="box tip"><header><h4>示例 3</h4></header><div class="box-content"><pre><code class="language-markdown nohljsln">.divide {
+    .cos {.pi}
+} by:{
+    .sum {2} {1}
+}</code></pre><div class="container fullwidth quarkdown-output"><p>-0.33333334</p></div></div></div><h2 id="行续接">行续接</h2><p>当一个函数调用包含许多参数时，行末的反斜杠（<span class="codespan-content"><code>\</code></span>）会将参数列表延续到下一行。</p><pre><code class="language-markdown">.container alignment:{center} \
+           background:{red} \
+           padding:{1px}</code></pre><p>反斜杠与换行符会被编译器消费掉，续接行开头可选的空白会被忽略。你可以根据需要用任意多个续接行。</p><p>行续接在块级与行内函数调用中均受支持。</p><h2 id="嵌套函数调用">嵌套函数调用</h2><p>函数调用可以嵌套在参数内部，从而让你组合出复杂的表达式。</p><div class="box tip"><header><h4>示例 4</h4></header><div class="box-content"><pre><code class="language-markdown nohljsln">.multiply {.pow {3} to:{2}} by:{.pi}</code></pre><div class="container fullwidth quarkdown-output"><p>28.274334</p></div></div></div><h2 id="链式调用">链式调用</h2><p>尽管 Quarkdown 完全依赖顶层声明，它还是利用了一些类 OOP 的语法糖，极大地提升了嵌套函数调用的可读性。</p><p>考虑下面这个调用：</p><pre><code class="language-markdown">.sum {.subtract {.pow {3} {2}} {1}} {2}</code></pre><p>它计算的是 <formula>(3^2 - 1) + 2 = 10</formula>。尽管简单，写起来和读起来却再难不过！下面这个调用完全等价：</p><pre><code class="language-markdown">.pow {3} {2}::subtract {1}::sum {2}</code></pre><p>好多了。现在它读起来就像我们自然地阅读数学的方式。</p><p>要理解链式调用的工作原理，考虑这个更简单的例子（请参阅<a href="../variables"><em>变量</em></a> 以了解更多关于变量的内容）：</p><pre><code class="language-markdown">.myvar::uppercase</code></pre><p>在底层，编译器会将此调用转换为：</p><pre><code class="language-markdown">.uppercase {.myvar}</code></pre><div class="box tip"><header><h4>示例 5</h4></header><div class="box-content"><pre><code class="language-markdown nohljsln">.var {myvar} {hello!}
+
+.myvar::uppercase</code></pre><div class="container fullwidth quarkdown-output"><p>HELLO!</p></div></div></div><p>一般而言，<span class="codespan-content"><code>.a::b</code></span> 会被转换为 <span class="codespan-content"><code>.b {.a}</code></span>，<span class="codespan-content"><code>.a::b::c</code></span> 转换为 <span class="codespan-content"><code>.c {.b {.a}}</code></span>，依此类推。</p><p>你可以向链中的任意函数追加额外参数。只需记住：从位置上看，被链式的值始终是<strong>下一个调用的第一个参数</strong>。</p><div class="box tip"><header><h4>示例 6</h4></header><div class="box-content"><p><span class="codespan-content"><code>.a {x}::b {y}</code></span> 会被转换为 <span class="codespan-content"><code>.b {.a {x}} {y}</code></span>：</p><pre><code class="language-markdown nohljsln">.sum {10} {5}::multiply {2}</code></pre><div class="container fullwidth quarkdown-output"><p>30</p></div></div></div><p>许多核心函数被设计成以链式方式调用，例如<a href="../none#examples"><em>None 的操作</em></a>。</p><h2 id="紧凑函数调用">紧凑函数调用</h2><p>一个函数调用通常必须被空白、符号，或一行的开头/结尾所包围。这意味着与单词字符直接相邻的一个调用不会被识别：</p><div class="box warning"><header><h4>示例 7</h4></header><div class="box-content"><pre><code class="language-markdown nohljsln">H.text {2} script:{sub}O</code></pre><div class="container fullwidth quarkdown-output"><p>H.text {2} script:{sub}O</p></div></div></div><p>将整个函数调用用花括号包裹，可以让它出现在任何位置，而不受周围字符的影响。包裹的花括号会被编译器消费掉，不会出现在输出中：</p><div class="box tip"><header><h4>示例 8</h4></header><div class="box-content"><pre><code class="language-markdown nohljsln">H{.text {2} script:{sub}}O</code></pre><div class="container fullwidth quarkdown-output"><p>H<sub>2</sub>O</p></div></div></div><h2 id="行内与块级函数调用">行内与块级函数调用</h2><p>函数调用可以出现在两种上下文中：行内或块级。</p><h3 id="行内调用">行内调用</h3><p>一个<strong>行内</strong>函数调用，其前后带有其他行内内容，例如文本。行内函数调用的输出会被简单地替换到父块中。</p><div class="box tip"><header><h4>示例 9</h4></header><div class="box-content"><pre><code class="language-markdown nohljsln">Ever wondered what **26+16** equals? It's .sum {26} {16}. Here you go.</code></pre><div class="container fullwidth quarkdown-output"><p>Ever wondered what <strong>26+16</strong> equals? It&rsquo;s 42. Here you go.</p></div></div></div><h3 id="块级调用">块级调用</h3><p>一个<strong>块级</strong>函数调用是孤立的。作为背景，在 Markdown 中，<em>块</em>是指一个段落、一段代码片段、一段引用、一个列表，等等。</p><pre><code class="language-markdown">Paragraph 1
+
+.myfunction {arg1} {arg2}
+
+Paragraph 2</code></pre><h3 id="主体参数">主体参数</h3><p>函数最多接受一个<strong>主体参数</strong>，它指向函数的<strong>主体参数</strong>：通常是签名中的最后一个参数，不过有些函数会将另一个参数指定为主体（在其文档中以<em>Likely body</em> 显示）。</p><p>主体参数跨越多行，不使用括号包裹，并且要求每一行都缩进至少两个空格或一个制表符：</p><pre><code class="language-markdown">.myfunction {arg1} {arg2}
+    Body argument, line 1
+    and line 2.</code></pre><p>整个主体必须共享相同的缩进。下面这个例子由于缩进不一致，会产生意外结果：</p><pre><code class="language-html">.myfunction {arg1} {arg2}
+    Body argument, line 1
+
+        and line 2. &lt;!-- 这是一个 4 空格缩进的代码块！ --&gt;</code></pre><h3 id="在主体参数中嵌套函数">在主体参数中嵌套函数</h3><p>其他函数，无论是块级还是行内，都可以嵌套在主体参数内部：</p><pre><code class="language-html">.row alignment:{center}                    &lt;!-- 块级  --&gt;
+    This document was made by .docauthor   &lt;!-- 行内 --&gt;
+
+    .column                                &lt;!-- 块级  --&gt;
+        The document name is .docname      &lt;!-- 行内 --&gt;
+
+        .loremipsum                        &lt;!-- 块级  --&gt;</code></pre>
+        <div id="footnote-area">
+          <div class="footnote-rule"></div>
+        </div>
+        <div id="sibling-pages-button-area"></div>
+        <footer>
+          <div class="position-left"></div>
+          <div class="position-center"></div>
+          <div class="position-right"></div>
+        </footer>
+      </main>
+      <aside class="margin-area" id="margin-area-right">
+        <div class="position-top"></div>
+        <div class="position-middle"></div>
+        <div class="position-bottom"></div>
+      </aside>
+    </div>
+  </body>
+</html>
